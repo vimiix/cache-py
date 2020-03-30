@@ -7,6 +7,9 @@ from datetime import datetime
 from threading import RLock
 from cacheout import Cache as LocalCache
 
+__version__ = "0.0.2"
+__author__ = "vimiix"
+
 LOCAL_CACHE_MAX_SIZE = 256
 COMPRESSION_THRESHOLD = 64
 ONE_MINUTE = 60
@@ -354,4 +357,3 @@ if __name__ == "__main__":
     r = cache.get(key)
     print("get result:", r)
     print("cache info:", cache.stats())
-    

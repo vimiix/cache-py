@@ -1,7 +1,7 @@
 # coding:utf-8
 
 import pytest
-from cache import (
+from vcache import (
     Cache,
     Item,
     RedisIface,
@@ -176,7 +176,7 @@ def test_redis_interface_error(cache):
     with pytest.raises(NotImplementedError) as e:
         cache.set(item)
 
-    
+
 def test_redis_local_cache_none_error(cache):
     cache.opt.local_cache = None
     item = Item("foo", "bar")
@@ -184,4 +184,3 @@ def test_redis_local_cache_none_error(cache):
         cache.set(item)
     err_msg = e.value.args[0]
     assert err_msg == "cache: both Redis and LocalCache are None"
-
