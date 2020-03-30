@@ -15,14 +15,14 @@ def read_file(filename):
 
 setup(
     name="vcache",
-    version="0.0.4",
+    version="0.0.6",
     author="vimiix",
     author_email="vimiix.py@gmail.com",
     url="https://github.com/vimiix/vcache",
     description="Python implementation of go-redis/cache",
     long_description=read_file("README.md"),
     long_description_content_type="text/markdown",
-    scripts=["vcache.py"],
+    packages=["vcache"],
     install_requires=["cacheout"],
     license="MIT",
     classifiers=[
